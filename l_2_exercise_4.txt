@@ -1,0 +1,6 @@
+C:\Users\pasha>mysqldump --where="1=1 order by help_keyword_id limit 100" mysql help_keyword > keyword_dmp.sql
+
+#При разворачивании содержимого дампа в новую базу данных выскакивает ошибка 
+#ERROR 3723 (HY000) at line 25: The table 'help_keyword' may not be created in the 
+#reserved tablespace 'mysql'. Ее можно исправить вручную – удалить строку 
+#«/*!50100 TABLESPACE `mysql` */…». А можно ли это сделать при создании дампа (указать параметр)?
